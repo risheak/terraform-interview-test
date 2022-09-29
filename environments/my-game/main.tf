@@ -9,15 +9,14 @@ terraform {
 provider "google" {
   credentials = file("./credentials.json")
   project = "tactile-interview-tests"
-  region = "europe-west1"
+  region = "europe-west1-b"
 }
 
 module "common" {
   source = "./../common"
 
   gcp-credentials-filepath = "./credentials.json"
-  region = "europe-west1"
-  zone = "europe-west1-c"
+  region = "europe-west1-b"
   env = "prod"
 
   k8s-nodes-machine-type = "n1-standard-1"

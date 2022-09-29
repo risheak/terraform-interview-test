@@ -15,7 +15,7 @@ prefix  = "john-doe"
 
 * Place the `credentials.json` file that you have received with this assignment in `environments/my-game/credentials.json`
 
-* Don't change the bucket name or project names defined in `commun/main.tf`
+* Don't change the bucket name or project names defined in `common/main.tf`
 
 ## How to use
 

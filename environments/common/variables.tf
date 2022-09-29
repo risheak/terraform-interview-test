@@ -13,11 +13,6 @@ variable "env" {
   type = string
 }
 
-variable "zone" {
-  description = "GCP Zone"
-  type = string
-}
-
 variable "k8s-nodes-count" {
   description = "Number of nodes"
   type = number
