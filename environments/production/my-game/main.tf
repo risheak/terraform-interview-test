@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
     bucket = "tactile-interview-terraform-state"
-    prefix  = "john-doe"
+    prefix  = "risheak-chauhan"
     credentials = "./credentials.json"
   }
 }
@@ -13,11 +13,11 @@ provider "google" {
 }
 
 module "common" {
-  source = "./../common"
+  source = "./../../common"
 
   gcp-credentials-filepath = "./credentials.json"
   region = "europe-west1-b"
-  env = "prod"
+  env = "production"
 
   k8s-nodes-machine-type = "n1-standard-1"
   k8s-nodes-count = 3
