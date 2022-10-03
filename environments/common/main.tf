@@ -1,3 +1,4 @@
+data "google_client_config" "default" {}
 provider "kubernetes" {
   host = module.k8s.endpoint
   username = module.k8s.username
@@ -16,4 +17,14 @@ module "k8s" {
   prefix = local.prefix
   region = var.region
   machine_type = var.k8s-nodes-machine-type
+}
+
+module "bb" {
+  source = "./BB"
+  env = var.env
+}
+
+module "bbb" {
+  source = "./BBB"
+  env = var.env
 }
