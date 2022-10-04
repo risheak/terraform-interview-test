@@ -13,7 +13,7 @@ This project along with the credentials provided to you will allow you to work w
 prefix  = "john-doe"
 ```
 
-* Place the `credentials.json` file that you have received with this assignment in `environments/my-game/credentials.json`
+* Place the `credentials.json` file that you have received with this assignment in `environments/[test/staging/production]/my-game/credentials.json`
 
 * Don't change the bucket name or project names defined in `common/main.tf`
 
