@@ -7,13 +7,13 @@ This project along with the credentials provided to you will allow you to work w
 
 ## Configuration
 
-* Use your firstname and lastname instead of the temporary prefix in `environments/my-game/main.tf`
+* Use your firstname and lastname instead of the temporary prefix in `environments/[test/staging/production]/main.tf`
 
 ```
 prefix  = "john-doe"
 ```
 
-* Place the `credentials.json` file that you have received with this assignment in `environments/[test/staging/production]/my-game/credentials.json`
+* Place the `credentials.json` file that you have received with this assignment in `environments/[test/staging/production]/credentials.json`
 
 * Don't change the bucket name or project names defined in `common/main.tf`
 
@@ -22,18 +22,20 @@ prefix  = "john-doe"
 Init the terraform environment in the specific environments folder. In case of Test environment, Run
 
 ```
-cd environments/test/my-game/
+cd environments/test/
 terraform init
 ```
 
-Run `plan` to view the changes before applying them.
+Run `plan` with a variable `game_to_deploy(the game that you want to deploy)` view the changes before applying them.
+Each game has a separate terraform module which loads from `modules/games/#{game_name}`
 
+e.g.- If you want to deploy BeeBlast, you can run
 ```
-terraform plan
+terraform plan -var="game_to_deploy=bb"
 ```
 
 Apply changes if you're happy with the plan.
 
 ```
-terraform apply
+terraform apply -var="game_to_deploy=bb"
 ```
