@@ -19,10 +19,10 @@ prefix  = "john-doe"
 
 ## How to use
 
-Init the terraform environment in the environments folder.
+Init the terraform environment in the specific environments folder
 
 ```
-cd environments/[GAME]
+cd environments/test/my-game/
 terraform init
 ```
 
