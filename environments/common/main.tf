@@ -17,11 +17,13 @@ module "k8s" {
 }
 
 module "bb" {
-  source = "./BB"
+  source = "./../../modules/games/BB"
   env = var.env
+  count = var.game_to_deploy == "bb" ? 1 : 0
 }
 
 module "bbb" {
-  source = "./BBB"
+  source = "./../../modules/games/BBB"
   env = var.env
+  count = var.game_to_deploy == "bbb" ? 1 : 0
 }

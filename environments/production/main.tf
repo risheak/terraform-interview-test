@@ -13,11 +13,12 @@ provider "google" {
 }
 
 module "common" {
-  source = "./../../common"
+  source = "./../common"
 
   gcp-credentials-filepath = "./credentials.json"
   region = "europe-west1-b"
   env = "production"
+  game_to_deploy = var.game_to_deploy
 
   k8s-nodes-machine-type = "n1-standard-1"
   k8s-nodes-count = 3

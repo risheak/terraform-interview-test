@@ -23,3 +23,9 @@ variable "k8s-nodes-machine-type" {
   type = string
   default = "n1-standard-1"
 }
+
+
+variable "game_to_deploy" {
+  description = "The name of the Game to deplpy"
+  type = string
+}
